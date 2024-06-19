@@ -8,8 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Iniciar proyecto
--version de nodejs 20.12.2
--proyecto desarrollado con vite con libreria de react
+- version de nodejs 20.12.2
+- proyecto desarrollado con vite con libreria de react
 
-npm install // para instalar los paquetes del priyecto
-npm run dev // para iniciar el proyecto web
+- npm install // para instalar los paquetes del priyecto
+- npm run dev // para iniciar el proyecto web
