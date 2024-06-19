@@ -37,10 +37,15 @@ const EditBook = (props) => {
             <label for="">Year Of Publication</label>
             <input type="text" className="form-control" name="year" placeholder="Year" value={book.year} onChange={handleInput} />
             </div>
-            <button className="btn btn-primary mr-4">Submit</button>
+            <div className="form-group">
+            <label for="">Stock</label>
+            <input type="text" className="form-control" name="stock" placeholder="Stock" value={book.stock} onChange={handleInput} />
+            </div>
+            <button className="btn btn-primary mr-4 mt-2">Submit</button>
             <button 
                 type="submit" 
-                className="btn btn-warning"
+                className="btn btn-warning mt-2"
+                style={{marginLeft: 8}}
                 onClick={() => props.setEdit(false)}
             >
                 Cancel

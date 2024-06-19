@@ -7,7 +7,8 @@ const Addbook = (props) => {
          id:null, 
          name:'', 
          author:'', 
-         year:''
+         year:'',
+         stock:''
         }
     const [book, setBook] = useState(formState);
 
@@ -20,7 +21,7 @@ const Addbook = (props) => {
     // handle book form on submission
     const submitBook = (e) => {
         e.preventDefault();
-        if(!book.name || !book.author || !book.year) return
+        if(!book.name || !book.author || !book.year || !book.stock) return
         props.addBook(book)
         setBook(formState)
     }
@@ -39,7 +40,11 @@ const Addbook = (props) => {
             <label for="">Year Of Publication</label>
             <input type="text" class="form-control" name="year" placeholder="Year" value={book.year} onChange={handleInput} />
             </div>
-            <button type="submit" class="btn btn-primary">Add Book</button>
+            <div class="form-group">
+            <label for="">Stock</label>
+            <input type="number" class="form-control" name="stock" placeholder="Stock" value={book.stock} onChange={handleInput} />
+            </div>
+            <button type="submit" class="btn btn-primary" style={{marginTop: 8}}>Add Book</button>
         </form>
     )
 }

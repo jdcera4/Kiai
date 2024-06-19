@@ -10,6 +10,7 @@ const Books = (props) => {
                 <th className="text-primary">Name</th>
                 <th className="text-primary">Author</th>
                 <th className="text-primary">Year</th>
+                <th className="text-primary">Stock</th>
                 <th className="text-primary">Edit</th>
                 <th className="text-primary">Delete</th>
                 </tr>
@@ -22,6 +23,7 @@ const Books = (props) => {
                             <td>{book.name}</td>
                             <td>{book.author}</td>
                             <td>{book.year}</td>
+                            <td>{book.stock}</td>
                             <td>
                                 <button 
                                     className="btn btn-sm btn-primary"

@@ -9,12 +9,13 @@ function App() {
 
   // setting initial states
   const bookData = [
-    { id: 1, name: 'Book 1', author: 'Author1', year: '1989'},
-    { id: 2, name: 'Book 2', author: 'Author 2', year: '2000'},
-    { id: 2, name: 'Book 3', author: 'Author 3', year: '2020'}
+    { id: 1, name: 'Book 1', author: 'Author1', year: '1989', stock: 5},
+    { id: 2, name: 'Book 2', author: 'Author 2', year: '2000', stock: 0},
+    { id: 2, name: 'Book 3', author: 'Author 3', year: '2020', stock: 2}
   ]
-  const formState = {id:null, name:'', author:'', year:''}
+  const formState = {id:null, name:'', author:'', year:'', stock: 0}
   const [books, setBooks] = useState(bookData);
+
   const [edit, setEdit] = useState(false);
   const [currentBook, setCurrentBook] = useState(formState);
 
@@ -28,7 +29,7 @@ function App() {
   // EDIT A BOOK
   const editBook = book => {
     setEdit(true)
-    setCurrentBook({ id:book.id, name:book.name, author:book.author, year:book.year })
+    setCurrentBook({ id:book.id, name:book.name, author:book.author, year:book.year, stock:book.stock })
   }
   // UPDATE A BOOK
   const updateBook = (id, updatedBook) => {
